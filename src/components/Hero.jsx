@@ -58,7 +58,7 @@ export default function Hero() {
               <ArrowBigDownDash size={"14px"} />
             </a>
           </div>
-          <div className="flex justify-start items-center max-md:justify-center">
+          <div className="flex justify-start mb-7 items-center max-md:justify-center">
             <a
               target="_blank"
               href="https://github.com/kebasfaycel"
@@ -76,8 +76,10 @@ export default function Hero() {
               <Linkedin />
             </a>
             <a
-            href="mailto:kebasfaycel@gmail.com"
-            target="_blank" className="btn-icon">
+              href="mailto:kebasfaycel@gmail.com"
+              target="_blank"
+              className="btn-icon"
+            >
               <Mail />
             </a>
           </div>
