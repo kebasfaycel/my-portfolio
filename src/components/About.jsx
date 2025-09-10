@@ -8,7 +8,7 @@ export default function About() {
   return (
     <section
       id="about"
-      className="relative px-3 flex flex-col max:sm-my-15 justify-center items-center text-white w-full"
+      className="relative px-3 flex flex-col max:sm-my-10 justify-center items-center text-white w-full"
     >
       <div className=" w-[99%] flex  p-3 flex-col items-center justify-center my-5 mr-3 ml-1">
         <h2 className=" text-3xl font-bold ">
