@@ -53,10 +53,6 @@ export default function About() {
                 Get in Touch &nbsp;
                 <BriefcaseBusiness size={"14px"} />
               </a>
-              <button className="btn item-shadow max-sm:text-[14px] bg-transparent text-primary flex justify-between items-center">
-                Download My Cv &nbsp;
-                <ArrowBigDownDash size={"14px"} />
-              </button>
             </div>
           </motion.div>
           <div className="grid grid-rows-3">
