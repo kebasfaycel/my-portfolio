@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #9d4edd;
+}
+@layer base {
+}
+body,
+html {
+  background-color: black;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+* {
+  box-sizing: border-box;
+}
+#root {
+  background-color: black;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+/* @utility text-glow {
+  text-shadow: 1px 1px 5px rgba(255, 255, 255, 0.7) -1px -1px 5px
+    rgba(255, 255, 255, 0.7);
+} */
+@utility btn {
+  @apply text-[16px] max-md:text-sm text-white bg-primary/40 backdrop-blur-2xl rounded-2xl  mx-1 font-normal py-2 px-3  hover:cursor-pointer hover:scale-[1.05] hover:translate-y-[-3px] transition-all duration-300;
+}
+@utility text-glow {
+  @apply [text-shadow:0_0_8px_rgba(255,255,255,0.6)];
+}
+@utility item-shadow {
+  @apply shadow-[0_0_5px_primary];
+}
+@utility btn-icon {
+  @apply m-3 hover:scale-[1.08] transition-all duration-300 cursor-pointer hover:text-primary hover:translate-y-[-2px] text-glow;
+}
+@utility card {
+  @apply bg-black/5 backdrop-blur-xs rounded-3xl border-primary border-[1.5px] cursor-pointer shadow-[0_0_5px_#9d4edd];
+}
+@utility card-hover {
+  @apply hover:scale-[1.05] transition-all duration-300 delay-75 hover:shadow-[0_0_20px_#9d4edd];
+}
+@utility nav {
+  text-shadow: "1px 1px 5px rgba(157, 78, 221, 0.5)";
+}
+::-webkit-scrollbar {
+  width: 8px;
+  height: 15px;
+}
+::-webkit-scrollbar-track {
+  background-color: rgba(157, 78, 221, 0.2);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #9d4edd;
+  border-radius: 10px;
+}
