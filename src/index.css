@@ -24,7 +24,7 @@ html {
     rgba(255, 255, 255, 0.7);
 } */
 @utility btn {
-  @apply text-[16px] max-md:text-xs text-white bg-primary/40 backdrop-blur-2xl rounded-2xl  mx-1 font-normal py-2 px-3  hover:cursor-pointer hover:scale-[1.05] hover:translate-y-[-3px] transition-all duration-300;
+  @apply text-[16px] max-sm:text-[12px] text-white bg-primary/40 backdrop-blur-2xl rounded-2xl  mx-1 font-normal py-2 px-3  hover:cursor-pointer hover:scale-[1.05] hover:translate-y-[-3px] transition-all duration-300;
 }
 @utility text-glow {
   @apply [text-shadow:0_0_8px_rgba(255,255,255,0.6)];
