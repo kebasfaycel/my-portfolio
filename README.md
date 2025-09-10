@@ -32,4 +32,4 @@ npm install
 npm start
 ```
 ## 📸 Preview
-![Portfolio Screenshot](./screenshot.png)
+![Portfolio Screenshot](./portfolio.png)
