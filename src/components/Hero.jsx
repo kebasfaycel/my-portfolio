@@ -26,7 +26,7 @@ export default function Hero() {
             delay: 0.2,
             type: "spring",
           }}
-          className="px-10 text-white max-md:text-center text-5xl max-sm:text-4xl font-bold h-96 w-full min-md:w-1/2 "
+          className="px-10 text-white max-md:text-center text-5xl max-sm:text-3xl font-bold h-96 w-full min-md:w-1/2 "
         >
           <span className="block my-4">Hi, </span>
           <span className="block my-4">I am Faycel </span>
