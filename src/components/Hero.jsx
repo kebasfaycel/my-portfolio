@@ -45,7 +45,7 @@ export default function Hero() {
             I build modern, user-friendly, and visually appealing web
             applications.
           </span>
-          <div className="flex justify-start  w-full max-md:justify-center items-center my-7">
+          <div className="flex justify-start mx-0 w-full max-md:justify-center items-center my-7">
             <a
               href="#projects"
               className="btn item-shadow flex justify-between  items-center"
