@@ -5,7 +5,7 @@ import Hero from "../components/Hero";
 import NavBar from "../components/NavBar";
 import Particles from "../components/Particles";
 import Projects from "../components/projects";
-import Skills from "../components/skills";
+import Skills from "../components/skills.jsx";
 export default function Home() {
   return (
     <div className="w-full overflow-x-hidden min-h-screen bg-black">

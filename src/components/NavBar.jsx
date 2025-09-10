@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { cn } from "../libs/utility";
 import "../index.css";
 import { Menu } from "lucide-react";
@@ -7,18 +7,6 @@ import { motion, useScroll } from "framer-motion";
 // import { TextAlignJustify } from "lucide-react";
 export default function NavBar() {
   const { scrollYProgress } = useScroll();
-  const [isScroll, setScroll] = useState(false);
-  useEffect(() => {
-    function handleScroll() {
-      // setScroll(true);
-    }
-
-    window.addEventListener("scroll", handleScroll);
-    handleScroll();
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
   const navItems = [
     { name: "Home", href: "#hero" },
     { name: "About", href: "#about" },
@@ -29,9 +17,6 @@ export default function NavBar() {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <nav
-      style={{
-        boxShadow: isScroll ? "1px 1px 10px rgba(157, 78, 221, 1)" : "",
-      }}
       className={cn(
         "fixed top-0 w-full h-15 z-90 p-5 transition-all duration-300",
         " backdrop-blur-xl shadow-sm flex items-center",
