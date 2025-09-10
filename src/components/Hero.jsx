@@ -58,7 +58,7 @@ export default function Hero() {
               <ArrowBigDownDash size={"14px"} />
             </a>
           </div>
-          <div className="flex justify-start mb-7 items-center max-md:justify-center">
+          <div className="flex justify-start mb-5 items-center max-md:justify-center">
             <a
               target="_blank"
               href="https://github.com/kebasfaycel"
