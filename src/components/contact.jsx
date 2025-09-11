@@ -39,7 +39,7 @@ export default function Contact() {
                 initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, delay: 0.2 }}
-                className=" min-h-20 w-full flex justify-start items-center p-4"
+                className=" min-h-20 w-full flex justify-start items-center p-2"
               >
                 <div className="rounded-full w-14 m-2 h-14 bg-primary/20 flex justify-center items-center">
                   <Mail className="text-primary" />
@@ -57,7 +57,7 @@ export default function Contact() {
                 initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, delay: 0.4 }}
-                className=" h-20 w-full flex justify-start items-center p-4"
+                className=" h-20 w-full flex justify-start items-center p-2"
               >
                 <div className="rounded-full w-14 m-2 h-14 bg-primary/20 flex justify-center items-center">
                   <Phone className="text-primary" />
@@ -78,7 +78,7 @@ export default function Contact() {
                 initial={{ opacity: 0, x: -40 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 1, delay: 0.6 }}
-                className=" h-20 w-full flex justify-start items-center p-4"
+                className=" h-20 w-full flex justify-start items-center p-2"
               >
                 <div className="rounded-full w-14 m-2 h-14 bg-primary/20 flex justify-center items-center">
                   <MapPin className="text-primary" />
