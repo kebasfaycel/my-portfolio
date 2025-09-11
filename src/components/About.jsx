@@ -35,7 +35,7 @@ export default function About() {
               React, Tailwind, and modern web technologies.
             </p>
             <p className="my-3">
-              I`am currently studying AI at ENSIA,I’m always exploring and
+              I`m currently studying AI at ENSIA,I’m always exploring and
               learning the latest web technologies to keep my work modern and
               efficient.
             </p>
