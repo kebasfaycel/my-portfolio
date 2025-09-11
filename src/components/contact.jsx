@@ -30,7 +30,7 @@ export default function Contact() {
             <span className="text-primary">Get In </span>
             <span className="text-glow">Touch</span>
           </h1>
-          <div className="grid grid-cols-1 jusctify md:grid-cols-2 gap-10 m-1 my-10">
+          <div className="grid grid-cols-1 jusctify md:grid-cols-2 gap-10 m-3 my-10">
             <div className=" min-h-[400px] flex flex-col items-center justify-start p-1">
               <h1 className="font-semibold text-2xl text-glow m-3">
                 Contact Information
