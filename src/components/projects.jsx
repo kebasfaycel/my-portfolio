@@ -72,10 +72,16 @@ export default function Projects() {
                       </p>
                     </div>
                     <div className="flex w-full flex-row justify-start items-center">
-                      <a>
+                      <a
+                        target="_blank"
+                        href="https://github.com/kebasfaycel/my-portfolio.git"
+                      >
                         <Github className="m-1 hover:text-primary transition-all duration-200 hover:translate-x-[1px] hover:translate-y-[-1px]" />
                       </a>
-                      <a>
+                      <a
+                        target="_blank"
+                        href="https://my-portfolio-plum-six-35.vercel.app/"
+                      >
                         {" "}
                         <ExternalLink className="m-1 hover:text-primary transition-all duration-200 hover:translate-x-[1px] hover:translate-y-[-1px]" />
                       </a>
