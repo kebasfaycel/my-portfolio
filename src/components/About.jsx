@@ -32,7 +32,7 @@ export default function About() {
             </p>
             <p className="my-3">
               I specialize in building clean, user-friendly websites using
-              React, Tailwind, and modern web technologies.
+              Next js, Tailwind, Express js, Hono js.
             </p>
             <p className="my-3">
               I`m currently studying AI at ENSIA,I’m always exploring and
@@ -71,8 +71,8 @@ export default function About() {
                 </div>
               </div>
               <div className="p-1 indent-2 max-sm:text-sm">
-                Building responsive, modern websites using React, Tailwind CSS,
-                and JavaScript.
+                Building responsive, modern websites using Next js, Tailwind CSS,
+                Express js and Hono js.
               </div>
             </motion.div>
             <motion.div

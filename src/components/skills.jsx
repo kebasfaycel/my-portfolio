@@ -31,40 +31,67 @@ export default function Skills() {
     cpplogo,
     muilogo,
     framerlogo,
+    "/vite.svg",
+    "https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png",
   ];
-  const skills = [
-    { name: "HTML", level: 90, category: "Frontend" },
-    { name: "CSS", level: 85, category: "Frontend" },
-    { name: "JavaScript", level: 80, category: "Frontend" },
-    { name: "React Js", level: 80, category: "Frontend" },
-    { name: "Tailwind CSS", level: 75, category: "Frontend" },
-    { name: "Git/GitHub", level: 60, category: "Tools" },
-    { name: "Figma", level: 70, category: "Tools" },
-    { name: "Canva", level: 70, category: "Tools" },
-    { name: "Linux", level: 85, category: "Tools" },
-    { name: "Latex", level: 75, category: "Tools" },
-    { name: "Postman", level: 75, category: "Tools" },
-    { name: "C++", level: 65, category: "Tools" },
+
+  const newSkills = [
+    { name: "Express", img: "https://cdn.simpleicons.org/express" },
+    { name: "Node.js", img: "https://cdn.simpleicons.org/nodedotjs" },
+    { name: "MongoDB", img: "https://cdn.simpleicons.org/mongodb" },
+    { name: "Mongoose", img: "https://cdn.simpleicons.org/mongoose" },
+    { name: "TypeScript", img: "https://cdn.simpleicons.org/typescript" },
+    { name: "Shadcn", img: "https://ui.shadcn.com/apple-touch-icon.png" },
+    { name: "Next Auth", img: "https://cdn.simpleicons.org/auth0" },
+    { name: "Zod", img: "https://cdn.simpleicons.org/zod" },
+    { name: "React Hook Form", img: "https://cdn.simpleicons.org/reacthookform" },
+    { name: "Open API", img: "https://cdn.simpleicons.org/openapiinitiative" },
+    {
+      name: "Next.js",
+      img: "https://assets.vercel.com/image/upload/v1662136487/nextjs/Icon_dark_background.png",
+    },
+    { name: "Hono.js", img: "https://cdn.simpleicons.org/hono" },
+    { name: "PHP", img: "https://cdn.simpleicons.org/php" },
+    { name: "Bun", img: "https://bun.sh/logo.svg" },
+    { name: "Uploadthing (alt)", img: "https://uploadthing.com/favicon.ico" },
+    { name: "Vercel", img: "https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png" },
+    { name: "pnpm", img: "https://cdn.simpleicons.org/pnpm" },
+    { name: "Axios", img: "https://cdn.simpleicons.org/axios" },
   ];
-  const [btn, setBtn] = useState("All");
-  const Categories = ["All", "Frontend", "Tools", "Backend"];
-  const Frontned = skills.filter((skill) => {
-    return skill.category === "Frontend";
-  });
-  const Backend = skills.filter((skill) => {
-    return skill.category === "Backend";
-  });
-  const Tools = skills.filter((skill) => {
-    return skill.category === "Tools";
-  });
-  const skillsShow =
-    btn === "All"
-      ? skills
-      : btn === "Frontend"
-      ? Frontned
-      : btn === "Tools"
-      ? Tools
-      : Backend;
+
+  // const skills = [
+  //   { name: "HTML", level: 90, category: "Frontend" },
+  //   { name: "CSS", level: 85, category: "Frontend" },
+  //   { name: "JavaScript", level: 80, category: "Frontend" },
+  //   { name: "React Js", level: 80, category: "Frontend" },
+  //   { name: "Tailwind CSS", level: 75, category: "Frontend" },
+  //   { name: "Git/GitHub", level: 60, category: "Tools" },
+  //   { name: "Figma", level: 70, category: "Tools" },
+  //   { name: "Canva", level: 70, category: "Tools" },
+  //   { name: "Linux", level: 85, category: "Tools" },
+  //   { name: "Latex", level: 75, category: "Tools" },
+  //   { name: "Postman", level: 75, category: "Tools" },
+  //   { name: "C++", level: 65, category: "Tools" },
+  // ];
+  // const [btn, setBtn] = useState("All");
+  // const Categories = ["All", "Frontend", "Tools", "Backend"];
+  // const Frontned = skills.filter((skill) => {
+  //   return skill.category === "Frontend";
+  // });
+  // const Backend = skills.filter((skill) => {
+  //   return skill.category === "Backend";
+  // });
+  // const Tools = skills.filter((skill) => {
+  //   return skill.category === "Tools";
+  // });
+  // const skillsShow =
+  //   btn === "All"
+  //     ? skills
+  //     : btn === "Frontend"
+  //     ? Frontned
+  //     : btn === "Tools"
+  //     ? Tools
+  //     : Backend;
   return (
     <section
       id="skills"
@@ -92,8 +119,20 @@ export default function Skills() {
               );
             })}
           </Marquee>
+          <Marquee pauseOnHover={true} autoFill={true} speed={"40"} direction="right">
+            {newSkills.map((s, index) => {
+              return (
+                <img
+                  key={index}
+                  src={s.img}
+                  alt={s.name}
+                  className="w-16 m-2 cursor-pointer hover:scale-[1.2] transition-all duration-300"
+                ></img>
+              );
+            })}
+          </Marquee>
         </motion.div>
-        <div className=" flex justify-center items-center h-14 my-4 card border-transparent">
+        {/* <div className=" flex justify-center items-center h-14 my-4 card border-transparent">
           {Categories.map((cat, key) => {
             return (
               <div>
@@ -135,8 +174,8 @@ export default function Skills() {
               </div>
             );
           })}
-        </div>
-        <div className="grid grid-cols-1 w-full sm:grid-cols-2 lg:grid-cols-3 gap-5 p-5">
+        </div> */}
+        {/* <div className="grid grid-cols-1 w-full sm:grid-cols-2 lg:grid-cols-3 gap-5 p-5">
           {skillsShow.map((skill, key) => {
             return (
               <AnimatePresence>
@@ -174,7 +213,7 @@ export default function Skills() {
               </AnimatePresence>
             );
           })}
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -170,7 +170,7 @@ export default function Contact() {
                 onChange={(e) => {
                   setFormInputs({ ...formInputs, email: e.target.value });
                 }}
-                type="text"
+                type="email"
                 required
                 id="email"
                 name="email"
