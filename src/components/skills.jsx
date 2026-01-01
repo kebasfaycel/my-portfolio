@@ -107,14 +107,14 @@ export default function Skills() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
-          className="w-[95%] m-5 bg-black/70"
+          className="m-2 z-20"
         >
           <Marquee pauseOnHover={true} autoFill={true} speed={"40"}>
             {logos.map((s) => {
               return (
                 <img
                   src={s}
-                  className="w-16 m-2 cursor-pointer hover:scale-[1.2] transition-all duration-300"
+                  className="w-12 md:w-16 m-2 cursor-pointer hover:scale-[1.2] transition-all duration-300"
                 ></img>
               );
             })}
@@ -126,7 +126,7 @@ export default function Skills() {
                   key={index}
                   src={s.img}
                   alt={s.name}
-                  className="w-16 m-2 cursor-pointer hover:scale-[1.2] transition-all duration-300"
+                  className="w-12 md:w-16 m-2 cursor-pointer hover:scale-[1.2] transition-all duration-300"
                 ></img>
               );
             })}
