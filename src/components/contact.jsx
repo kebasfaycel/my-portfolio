@@ -124,7 +124,7 @@ export default function Contact() {
                 setFormInputs({ name: "", email: "", message: "" });
                 handleclick();
               }}
-              className="card min-h-[600px] flex flex-col justify-evenly p-3 items-center"
+              className="card min-h-[600px] flex flex-col justify-evenly p-3 items-center *:rounded-3xl"
             >
               <h1 className="text-glow text-xl font-semibold">
                 Send a Message

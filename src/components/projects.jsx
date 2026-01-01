@@ -7,13 +7,60 @@ import framer from "../assets/skills/framer.svg";
 import router from "../assets/skills/router.svg";
 import { ExternalLink, Github } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
+import evently from "../assets/projects/evently.png";
+import signUp from "../assets/projects/signUp.png";
+
 export default function Projects() {
   const projects = [
     {
       id: 1,
       title: "My Personal Porftfolio",
+      description:
+        "A responsive personal portfolio developed using React Tailwind CSS, and Framer Motion for smooth animations ",
       img: portfolio,
-      tags: ["React", "Tailwind", "Framer motion"],
+      tags: [react, tailwind, framer, router],
+      demo: "",
+      repo: "",
+    },
+    {
+      id: 2,
+      title: "Evently",
+      description:
+        "Evently is a modern event management platform which allows users to create, manage, and discover events seamlessly",
+      img: evently,
+      tags: [
+        "https://assets.vercel.com/image/upload/v1662136487/nextjs/Icon_dark_background.png",
+        "https://cdn.simpleicons.org/typescript",
+        "https://ui.shadcn.com/apple-touch-icon.png",
+        "https://cdn.simpleicons.org/reacthookform",
+        "https://cdn.simpleicons.org/zod",
+        "https://cdn.simpleicons.org/mongoose",
+        "https://cdn.simpleicons.org/mongodb",
+        "https://uploadthing.com/favicon.ico",
+        "https://next-auth.js.org/img/logo/logo-sm.png",
+        react,
+        tailwind,
+        framer,
+        router,
+      ],
+      demo: "",
+      repo: "",
+    },
+    {
+      id: 3,
+      title: "Authentication",
+      description:
+        "A modern authentication system, featuring email/password login, OAuth providers, password reset, and a clean shadcn-powered UI",
+      img: signUp,
+      tags: [
+        "https://assets.vercel.com/image/upload/v1662136487/nextjs/Icon_dark_background.png",
+        tailwind,
+        framer,
+        "https://cdn.simpleicons.org/typescript",
+        "https://cdn.simpleicons.org/mongoose",
+        "https://cdn.simpleicons.org/mongodb",
+        "https://next-auth.js.org/img/logo/logo-sm.png",
+      ],
       demo: "",
       repo: "",
     },
@@ -51,37 +98,34 @@ export default function Projects() {
                     <div className="w-full flex justify-center overflow-hidden">
                       <img
                         src={project.img}
-                        className="hover:scale-[1.2] hover:translate-x-5 overflow-hidden transition-all duration-200 rounded-2xl"
+                        className="hover:scale-[1.2] hover:translate-x-5 h-48 overflow-hidden transition-all duration-200 rounded-2xl"
                       ></img>
                     </div>
                     <hr className="m-2 text-primary" />
-                    <div className="my-4 p-1 flex justify-start w-full items-center">
-                      <img src={react} className="w-8 m-1"></img>
-                      <img src={tailwind} className="w-8 m-1"></img>
-                      <img src={framer} className="w-8 m-1 h-6"></img>
-                      <img src={router} className="w-8 m-1 h-6"></img>
+                    <div className="my-4 p-1 flex flex-wrap justify-start w-full items-center gap-2">
+                      {project.tags.map((tag, key) => {
+                        return (
+                          <img
+                            src={tag}
+                            key={key}
+                            className="w-7 h-7 object-contain"
+                            alt="tech-logo"
+                          />
+                        );
+                      })}
                     </div>
                     <div>
                       <h1 className=" font-semibold text-xl text-center text-primary">
                         {" "}
                         {project.title}
                       </h1>
-                      <p className="p-2 indent-3">
-                        A responsive personal portfolio developed using React,
-                        Tailwind CSS, and Framer Motion for smooth animations .
-                      </p>
+                      <p className="p-2 indent-3">{project.description}</p>
                     </div>
                     <div className="flex w-full flex-row justify-start items-center">
-                      <a
-                        target="_blank"
-                        href="https://github.com/kebasfaycel/my-portfolio.git"
-                      >
+                      <a target="_blank" href="">
                         <Github className="m-1 hover:text-primary transition-all duration-200 hover:translate-x-[1px] hover:translate-y-[-1px]" />
                       </a>
-                      <a
-                        target="_blank"
-                        href="https://my-portfolio-plum-six-35.vercel.app/"
-                      >
+                      <a target="_blank" href="">
                         {" "}
                         <ExternalLink className="m-1 hover:text-primary transition-all duration-200 hover:translate-x-[1px] hover:translate-y-[-1px]" />
                       </a>
