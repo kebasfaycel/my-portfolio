@@ -36,7 +36,7 @@ export default function Skills() {
   ];
 
   const newSkills = [
-    { name: "Express", img: "https://cdn.simpleicons.org/express" },
+    { name: "Express", img: "https://cdn.simpleicons.org/express/ffffff" },
     { name: "Node.js", img: "https://cdn.simpleicons.org/nodedotjs" },
     { name: "MongoDB", img: "https://cdn.simpleicons.org/mongodb" },
     { name: "Mongoose", img: "https://cdn.simpleicons.org/mongoose" },
@@ -44,7 +44,10 @@ export default function Skills() {
     { name: "Shadcn", img: "https://ui.shadcn.com/apple-touch-icon.png" },
     { name: "Next Auth", img: "https://cdn.simpleicons.org/auth0" },
     { name: "Zod", img: "https://cdn.simpleicons.org/zod" },
-    { name: "React Hook Form", img: "https://cdn.simpleicons.org/reacthookform" },
+    {
+      name: "React Hook Form",
+      img: "https://cdn.simpleicons.org/reacthookform",
+    },
     { name: "Open API", img: "https://cdn.simpleicons.org/openapiinitiative" },
     {
       name: "Next.js",
@@ -54,7 +57,10 @@ export default function Skills() {
     { name: "PHP", img: "https://cdn.simpleicons.org/php" },
     { name: "Bun", img: "https://bun.sh/logo.svg" },
     { name: "Uploadthing (alt)", img: "https://uploadthing.com/favicon.ico" },
-    { name: "Vercel", img: "https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png" },
+    {
+      name: "Vercel",
+      img: "https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png",
+    },
     { name: "pnpm", img: "https://cdn.simpleicons.org/pnpm" },
     { name: "Axios", img: "https://cdn.simpleicons.org/axios" },
   ];
@@ -119,7 +125,12 @@ export default function Skills() {
               );
             })}
           </Marquee>
-          <Marquee pauseOnHover={true} autoFill={true} speed={"40"} direction="right">
+          <Marquee
+            pauseOnHover={true}
+            autoFill={true}
+            speed={"40"}
+            direction="right"
+          >
             {newSkills.map((s, index) => {
               return (
                 <img

@@ -41,7 +41,6 @@ export default function Projects() {
         react,
         tailwind,
         framer,
-        router,
       ],
       demo: "",
       repo: "",
@@ -93,12 +92,12 @@ export default function Projects() {
                       delay: `${project.id}`,
                     }}
                     exit={{ opacity: 0 }}
-                    className="card m-1 card-hover p-2 h-[500px] flex flex-col items-center justify-evenly"
+                    className="card m-1 card-hover p-2 min-h-[500px] flex flex-col items-center justify-evenly"
                   >
                     <div className="w-full flex justify-center overflow-hidden">
                       <img
                         src={project.img}
-                        className="hover:scale-[1.2] hover:translate-x-5 h-48 overflow-hidden transition-all duration-200 rounded-2xl"
+                        className="hover:scale-[1.2] hover:translate-x-5 h-44 overflow-hidden transition-all duration-200 rounded-none"
                       ></img>
                     </div>
                     <hr className="m-2 text-primary" />
