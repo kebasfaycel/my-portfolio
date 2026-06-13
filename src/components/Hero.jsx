@@ -174,7 +174,7 @@ export default function Hero() {
             </OrbitingCircles>
             {/* Center image */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <img src={naruto} alt="Naruto" className="size-56 max-md:size-32 max-sm:size-24 object-contain drop-shadow-[0_0_20px_rgba(157,78,221,0.5)]" />
+              <img src={naruto} alt="Naruto" className="size-56 max-md:size-44 max-sm:size-36 object-contain drop-shadow-[0_0_20px_rgba(157,78,221,0.5)]" />
             </div>
           </div>
         </motion.div>
