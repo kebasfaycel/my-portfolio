@@ -20,7 +20,7 @@ export default function NavBar() {
       className={cn(
         "fixed top-0 w-full h-15 z-90 p-5 transition-all duration-300",
         " backdrop-blur-xl shadow-sm flex items-center",
-        "bg-black/5  "
+        "bg-black/5  ",
       )}
     >
       <div className=" flex justify-between items-center w-full px-4">
@@ -54,7 +54,7 @@ export default function NavBar() {
           className={cn(
             "fixed inset-0 flex flex-col justify-center ",
             "items-center backdrop-blur-3xl bg-black/95 h-screen transition-all duration-300 min-sm:hidden",
-            !isOpen ? "hidden" : ""
+            !isOpen ? "hidden" : "",
           )}
         >
           <div className={cn("flex flex-col justify-center items-center")}>
