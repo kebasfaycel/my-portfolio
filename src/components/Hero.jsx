@@ -26,7 +26,10 @@ import routerlogo from "../assets/skills/router.svg";
 
 const outerOrbit = [
   { name: "React", img: reactlogo },
-  { name: "Next.js", img: "https://assets.vercel.com/image/upload/v1662136487/nextjs/Icon_dark_background.png" },
+  {
+    name: "Next.js",
+    img: "https://assets.vercel.com/image/upload/v1662136487/nextjs/Icon_dark_background.png",
+  },
   { name: "TypeScript", img: "https://cdn.simpleicons.org/typescript" },
   { name: "Tailwind", img: tailwindlogo },
   { name: "Redux", img: reduxlogo },
@@ -39,7 +42,10 @@ const outerOrbit = [
   { name: "Bun", img: "https://bun.sh/logo.svg" },
   { name: "Hono", img: "https://cdn.simpleicons.org/hono" },
   { name: "Vite", img: "/vite.svg" },
-  { name: "Vercel", img: "https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png" },
+  {
+    name: "Vercel",
+    img: "https://assets.vercel.com/image/upload/front/favicon/vercel/180x180.png",
+  },
 ];
 
 const innerOrbit = [
@@ -174,7 +180,11 @@ export default function Hero() {
             </OrbitingCircles>
             {/* Center image */}
             <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
-              <img src={naruto} alt="Naruto" className="size-56 max-md:size-44 max-sm:size-36 object-contain drop-shadow-[0_0_20px_rgba(157,78,221,0.5)]" />
+              <img
+                src={naruto}
+                alt="Naruto"
+                className="size-56 max-md:size-32 max-sm:size-24 object-contain drop-shadow-[0_0_20px_rgba(157,78,221,0.5)]"
+              />
             </div>
           </div>
         </motion.div>

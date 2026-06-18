@@ -1,5 +1,5 @@
-import React from "react"
-import { cn } from "../libs/utility"
+import React from "react";
+import { cn } from "../libs/utility";
 
 export function OrbitingCircles({
   className,
@@ -7,12 +7,12 @@ export function OrbitingCircles({
   reverse,
   duration = 20,
   radius = 160,
-  path = true,
+  path = false,
   iconSize = 30,
   speed = 1,
   ...props
 }) {
-  const calculatedDuration = duration / speed
+  const calculatedDuration = duration / speed;
   return (
     <>
       {path && (
@@ -22,7 +22,7 @@ export function OrbitingCircles({
           className="pointer-events-none absolute inset-0 size-full"
         >
           <circle
-            className="stroke-white/10 stroke-[0.5]"
+            className="stroke-white/40 stroke-1"
             cx="50%"
             cy="50%"
             r={radius}
@@ -31,28 +31,26 @@ export function OrbitingCircles({
         </svg>
       )}
       {React.Children.map(children, (child, index) => {
-        const angle = (360 / React.Children.count(children)) * index
+        const angle = (360 / React.Children.count(children)) * index;
         return (
           <div
-            style={
-              {
-                "--duration": calculatedDuration,
-                "--radius": radius,
-                "--angle": angle,
-                "--icon-size": `${iconSize}px`,
-              }
-            }
+            style={{
+              "--duration": calculatedDuration,
+              "--radius": radius,
+              "--angle": angle,
+              "--icon-size": `${iconSize}px`,
+            }}
             className={cn(
               `animate-orbit absolute flex size-(--icon-size) transform-gpu items-center justify-center rounded-full`,
               { "[animation-direction:reverse]": reverse },
-              className
+              className,
             )}
             {...props}
           >
             {child}
           </div>
-        )
+        );
       })}
     </>
-  )
+  );
 }

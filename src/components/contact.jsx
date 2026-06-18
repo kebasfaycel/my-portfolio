@@ -1,16 +1,20 @@
 import {
   Github,
   Linkedin,
-  LocateIcon,
   Mail,
   MapPin,
   Phone,
   Send,
-  SendHorizonal,
 } from "lucide-react";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { useSnack } from "../contexts/SnackbarContext";
+import emailjs from "@emailjs/browser";
+const {
+  VITE_EMAILJS_SERVICE_ID,
+  VITE_EMAILJS_TEMPLATE_ID,
+  VITE_EMAILJS_PUBLIC_KEY,
+} = import.meta.env;
 export default function Contact() {
   const handleclick = useSnack();
   const [formInputs, setFormInputs] = useState({
@@ -18,6 +22,32 @@ export default function Contact() {
     email: "",
     message: "",
   });
+
+  const form = useRef();
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        VITE_EMAILJS_SERVICE_ID,
+        VITE_EMAILJS_TEMPLATE_ID,
+        form.current,
+        {
+          publicKey: VITE_EMAILJS_PUBLIC_KEY,
+        },
+      )
+      .then(
+        () => {
+          console.log("SUCCESS!");
+          setFormInputs({ name: "", email: "", message: "" });
+          handleclick();
+        },
+        (error) => {
+          console.log("FAILED...", error.text);
+        },
+      );
+  };
   return (
     <>
       <section
@@ -116,13 +146,15 @@ export default function Contact() {
               </motion.div>
             </div>
             <motion.form
+              ref={form}
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 1, delay: 0.2 }}
+              viewport={{
+                once: true,
+              }}
               onSubmit={(e) => {
-                e.preventDefault();
-                setFormInputs({ name: "", email: "", message: "" });
-                handleclick();
+                sendEmail(e);
               }}
               className="card min-h-[600px] flex flex-col justify-evenly p-3 items-center *:rounded-xl"
             >
@@ -151,7 +183,7 @@ export default function Contact() {
                 required
                 name="name"
                 placeholder="KEBAS Faycel"
-                autoComplete="false"
+                autoComplete="off"
                 className="w-[90%] p-3 rounded-md card focus:outline-hidden bg-primary/7 backdrop-blur-2xl"
               ></motion.input>
               <motion.label
