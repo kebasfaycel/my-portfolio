@@ -117,7 +117,7 @@ export default function Contact() {
                   <span className="font-semibold text-glow"> Location</span>
                   <span className="hover:text-primary/70 transition-all duration-200">
                     {" "}
-                    Tissemsilt, Algeria
+                    Algiers, Algeria
                   </span>
                 </div>
               </motion.div>
